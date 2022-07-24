@@ -6,7 +6,7 @@ steps:
     params:
       repository_type: git
       service_account: test-sa
-      images: coderator98/test-dev,coderator98/test-pro
+      images: <yourusername>/test-dev,<yourusername>/test-pro
       args_from_configmaps: tekton/cm-test
       args: key3:value1,key4:value2
       allowed_branches: dev,master
@@ -40,7 +40,7 @@ steps:
       trunk_based: enabled
       rollout_restart: true
       env: dev
-      images: coderator98/test-dev
+      images: <yourusername>/test-dev
     next: 
       - jenkins
   - name: jenkins
